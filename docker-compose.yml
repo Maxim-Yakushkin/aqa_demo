@@ -1,0 +1,8 @@
+#services:
+#  postgres:
+#    container_name: postgres_aqa_demo
+#    image: allure
+#    environment:
+#
+#volumes:
+#  postgres:
