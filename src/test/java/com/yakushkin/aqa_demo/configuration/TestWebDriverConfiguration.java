@@ -20,7 +20,7 @@ public class TestWebDriverConfiguration {
     private long defaultPageLoadTimeout;
     @Value("${driver.remote.mode}")
     private boolean remoteMode;
-    @Value("${driver.remote.url}")
+    @Value("${driver.remote.outer.url}")
     private String remoteServerUrl;
     @Value("${assertion_mode}")
     private String assertionMode;
