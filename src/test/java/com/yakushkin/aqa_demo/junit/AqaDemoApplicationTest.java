@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.title;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.yakushkin.aqa_demo.framework.DriverManager.initDriver;
+import static io.qameta.allure.Allure.step;
 import static java.time.Duration.ofSeconds;
 
 @SpringBootTest
@@ -24,18 +25,18 @@ class AqaDemoApplicationTest {
 
     @Test
     void openOnlinerHome() {
-        open("https://www.onliner.by/");
-        webdriver()
+        step("Open Onliner Home page", () -> open("https://www.onliner.by/"));
+        step("check URL and browser title", () -> webdriver()
                 .shouldHave(url("https://www.onliner.by/"), ofSeconds(10))
-                .shouldHave(title("Onlíner"), ofSeconds(10));
+                .shouldHave(title("Onlíner"), ofSeconds(10)));
     }
 
     @Test
     void openOnlinerCatalog() {
-        open("https://catalog.onliner.by/");
-        webdriver()
+        step("Open Online Catalog page", () -> open("https://catalog.onliner.by/"));
+        step("check URL and browser title", () -> webdriver()
                 .shouldHave(url("https://catalog.onliner.by/"), ofSeconds(10))
-                .shouldHave(title("Каталог Onlíner"), ofSeconds(10));
+                .shouldHave(title("Каталог Onlíner"), ofSeconds(10)));
     }
 
 }
