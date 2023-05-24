@@ -15,7 +15,7 @@ public class DriverManager {
 
     private static final long DEFAULT_PAGE_LOAD_TIMEOUT = Long.parseLong(getProperty("driver.default.page_load_timeout"));
     private static final boolean REMOTE_MODE = Boolean.parseBoolean(getProperty("driver.remote.mode"));
-    private static final String REMOTE_SERVER_URL = getProperty("driver.remote.outer.url");
+    private static final String REMOTE_SERVER_URL = getProperty("driver.remote.inner.url");
     private static final String ASSERTION_MODE = getProperty("assertion_mode");
 
     public static void initDriver(String browserName) {
