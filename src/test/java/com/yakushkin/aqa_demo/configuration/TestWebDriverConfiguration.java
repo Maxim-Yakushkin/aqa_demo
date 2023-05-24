@@ -20,8 +20,12 @@ public class TestWebDriverConfiguration {
     private long defaultPageLoadTimeout;
     @Value("${driver.remote.mode}")
     private boolean remoteMode;
+    @Value("${docker_mode}")
+    private boolean dockerMode;
     @Value("${driver.remote.outer.url}")
-    private String remoteServerUrl;
+    private String remoteOuterServerUrl;
+    @Value("${driver.remote.inner.url}")
+    private String remoteInnerServerUrl;
     @Value("${assertion_mode}")
     private String assertionMode;
 
@@ -30,7 +34,7 @@ public class TestWebDriverConfiguration {
         Configuration.browser = defaultWebDriver;
         Configuration.pageLoadTimeout = defaultPageLoadTimeout;
         if (remoteMode) {
-            Configuration.remote = remoteServerUrl;
+            Configuration.remote = dockerMode ? remoteInnerServerUrl : remoteOuterServerUrl;
         }
         Configuration.assertionMode = AssertionMode.valueOf(assertionMode.toUpperCase());
 
