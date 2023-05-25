@@ -1,0 +1,3 @@
+com\yakushkin\aqa_demo\configuration\TestWebDriverConfiguration.class
+com\yakushkin\aqa_demo\testng\TNGTest.class
+com\yakushkin\aqa_demo\junit\AqaDemoApplicationTest.class

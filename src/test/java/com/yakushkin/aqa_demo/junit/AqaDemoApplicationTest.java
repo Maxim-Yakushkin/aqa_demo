@@ -1,6 +1,8 @@
 package com.yakushkin.aqa_demo.junit;
 
 import com.codeborne.selenide.Browsers;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,6 +22,7 @@ class AqaDemoApplicationTest {
 
     @BeforeAll
     static void setUp() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
         initDriver(Browsers.EDGE);
     }
 
@@ -28,7 +31,7 @@ class AqaDemoApplicationTest {
         step("Open Onliner Home page", () -> open("https://www.onliner.by/"));
         step("check URL and browser title", () -> webdriver()
                 .shouldHave(url("https://www.onliner.by/"), ofSeconds(10))
-                .shouldHave(title("Onlíner"), ofSeconds(10)));
+                .shouldHave(title("Onlínerr"), ofSeconds(10)));
     }
 
     @Test

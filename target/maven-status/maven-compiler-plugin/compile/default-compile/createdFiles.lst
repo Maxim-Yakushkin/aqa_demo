@@ -1,0 +1,4 @@
+com\yakushkin\aqa_demo\AqaDemoApplication.class
+com\yakushkin\aqa_demo\util\PropertiesReader.class
+com\yakushkin\aqa_demo\configuration\WebDriverConfiguration.class
+com\yakushkin\aqa_demo\framework\DriverManager.class
