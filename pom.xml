@@ -20,6 +20,7 @@
         <java.version>18</java.version>
         <aspectj.version>1.8.10</aspectj.version>
         <allure.reportVersion>2.22.1</allure.reportVersion>
+        <cucumber.version>7.11.1</cucumber.version>
     </properties>
 
     <dependencies>
@@ -28,10 +29,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-web</artifactId>-->
+        <!--        </dependency>-->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
         <!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
@@ -63,6 +64,13 @@
             <version>2.21.0</version>
         </dependency>
 
+        <!--        Cucumber-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
         <!--        Testing section-->
         <!--        Spring Boot Test-->
         <dependency>
@@ -76,12 +84,18 @@
             <version>7.7.1</version>
             <scope>test</scope>
         </dependency>
-            <dependency>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-junit5</artifactId>
-                <version>2.21.0</version>
-                <scope>test</scope>
-            </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit5</artifactId>
+            <version>2.21.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -120,9 +134,9 @@
                         <version>1.2.0</version>
                     </dependency>
                     <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjweaver</artifactId>
-                    <version>${aspectj.version}</version>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -132,7 +146,9 @@
                 <version>2.12.0</version>
                 <configuration>
                     <reportVersion>${allure.reportVersion}</reportVersion>
-                    <allureDownloadUrl>https://github.com/allure-framework/allure2/releases/download/${allure.reportVersion}/allure-${allure.reportVersion}.zip</allureDownloadUrl>
+                    <allureDownloadUrl>
+                        https://github.com/allure-framework/allure2/releases/download/${allure.reportVersion}/allure-${allure.reportVersion}.zip
+                    </allureDownloadUrl>
                 </configuration>
             </plugin>
         </plugins>
