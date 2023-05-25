@@ -31,7 +31,7 @@ class AqaDemoApplicationTest {
         step("Open Onliner Home page", () -> open("https://www.onliner.by/"));
         step("check URL and browser title", () -> webdriver()
                 .shouldHave(url("https://www.onliner.by/"), ofSeconds(10))
-                .shouldHave(title("Onlínerr"), ofSeconds(10)));
+                .shouldHave(title("Onlíner"), ofSeconds(10)));
     }
 
     @Test
