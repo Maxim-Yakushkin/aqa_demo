@@ -1,3 +1,7 @@
 com\yakushkin\aqa_demo\configuration\TestWebDriverConfiguration.class
+com\yakushkin\aqa_demo\cucumber\testng\hook\ScreenshotHook.class
 com\yakushkin\aqa_demo\testng\TNGTest.class
+com\yakushkin\aqa_demo\cucumber\testng\hook\InfoHook.class
 com\yakushkin\aqa_demo\junit\AqaDemoApplicationTest.class
+com\yakushkin\aqa_demo\cucumber\testng\runner\CucumberTestRunner.class
+com\yakushkin\aqa_demo\cucumber\testng\step\ShoppingCartStep.class
