@@ -14,10 +14,13 @@ class AllureDemoTest {
 
     @Value("${driver.default.name}")
     private String browser;
+    @Value("${driver.remote.inner.url}")
+    private String remoteServerUrl;
 
     @Test
     void test1() {
         Configuration.browser = browser;
+        Configuration.remote = remoteServerUrl;
         open("https://www.onliner.by");
     }
 }
