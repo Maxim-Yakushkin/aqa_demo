@@ -9,6 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>demo_allure</module>
+        <module>demo_rest</module>
     </modules>
     <name>aqa_demo</name>
     <description>aqa_demo</description>
