@@ -22,8 +22,8 @@ public class AppDemoConfiguration {
     private long defaultPageLoadTimeout;
     @Value("${driver.remote.mode}")
     private boolean remoteMode;
-    @Value("${docker_mode}")
-    private boolean dockerMode;
+    @Value("${jenkins_docker_mode}")
+    private boolean jenkinsDockerMode;
     @Value("${driver.remote.outer.url}")
     private String remoteOuterServerUrl;
     @Value("${driver.remote.inner.url}")
@@ -36,7 +36,7 @@ public class AppDemoConfiguration {
         Configuration.browser = defaultWebDriver;
         Configuration.pageLoadTimeout = defaultPageLoadTimeout;
         if (remoteMode) {
-            Configuration.remote = dockerMode ? remoteInnerServerUrl : remoteOuterServerUrl;
+            Configuration.remote = jenkinsDockerMode ? remoteInnerServerUrl : remoteOuterServerUrl;
         }
         Configuration.assertionMode = AssertionMode.valueOf(assertionMode.toUpperCase());
 

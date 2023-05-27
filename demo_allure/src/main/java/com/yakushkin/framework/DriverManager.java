@@ -3,7 +3,6 @@ package com.yakushkin.framework;
 import com.codeborne.selenide.AssertionMode;
 import com.codeborne.selenide.Configuration;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Marker;
 import org.springframework.stereotype.Component;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -16,7 +15,7 @@ public class DriverManager {
 
     private static final long DEFAULT_PAGE_LOAD_TIMEOUT = Long.parseLong(getProperty("driver.default.page_load_timeout"));
     private static final boolean REMOTE_MODE = Boolean.parseBoolean(getProperty("driver.remote.mode"));
-    private static final boolean DOCKER_MODE = Boolean.parseBoolean(getProperty("docker_mode"));
+    private static final boolean DOCKER_MODE = Boolean.parseBoolean(getProperty("jenkins_docker_mode"));
     private static final String REMOTE_OUTER_SERVER_HOST = getProperty("driver.remote.outer.host");
     private static final String REMOTE_INNER_SERVER_HOST = getProperty("driver.remote.inner.host");
     private static final String REMOTE_OUTER_SERVER_PORT = getProperty("driver.remote.outer.port");
