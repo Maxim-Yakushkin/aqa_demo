@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="21.926" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="As an open web user" name="Shopping cart should contains selected product by click on 'В корзину' button - Example #1.1" time="7.75">
+<system-out><![CDATA[
+Given the user opened any product page "https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12".passed
+When the user clicks on "В корзину" button from any supplier................passed
+And the user close recommended sidebar if it displayed......................passed
+And the user click on shopping cart icon....................................passed
+Then the shopping cart contains the previously selected product.............passed
+Then the product page contains button with "В корзине" name for previously selected supplier.passed
+]]></system-out>
+</testcase>
+<testcase classname="As an open web user" name="Shopping cart should contains selected product by click on 'В корзину' button - Example #1.2" time="6.986">
+<system-out><![CDATA[
+Given the user opened any product page "https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg".passed
+When the user clicks on "В корзину" button from any supplier................passed
+And the user close recommended sidebar if it displayed......................passed
+And the user click on shopping cart icon....................................passed
+Then the shopping cart contains the previously selected product.............passed
+Then the product page contains button with "В корзине" name for previously selected supplier.passed
+]]></system-out>
+</testcase>
+</testsuite>
