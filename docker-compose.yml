@@ -4,7 +4,7 @@ services:
     image: "aerokube/selenoid:latest"
     container_name: selenoid
     volumes:
-      - "D:/Projects/aqa_demo/src/main/resources/selenoid/config:/etc/selenoid"
+      - "D:/Projects/aqa_demo/demo_allure/src/main/resources/selenoid/config:/etc/selenoid"
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - OVERRIDE_VIDEO_OUTPUT_DIR=D:/Projects/aqa_demo/src/main/resources/selenoid/video
