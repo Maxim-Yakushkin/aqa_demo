@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.yakushkin.util.LogHelper.LOG_WEB_DRIVER_CONFIGURATION_PATTERN;
 import static com.yakushkin.util.PropertiesReader.getProperty;
 
 @Component
@@ -27,30 +28,18 @@ public class DriverManager {
     private static final String ASSERTION_MODE = getProperty("assertion_mode");
 
     public static void initDriver(String browserName) {
-        Configuration.browser = browserName;
-        Configuration.pageLoadTimeout = DEFAULT_PAGE_LOAD_TIMEOUT;
-        Configuration.assertionMode = AssertionMode.valueOf(ASSERTION_MODE.toUpperCase());
-        if (REMOTE_MODE) {
-            Configuration.remote = REMOTE_SERVER_URL;
-        }
-
-        open();
-        getWebDriver().manage().window().maximize();
+        initDriverConfiguration(browserName, REMOTE_MODE, REMOTE_SERVER_URL);
     }
 
     public static void initDriver(String browserName, boolean remoteMode) {
-        Configuration.browser = browserName;
-        Configuration.pageLoadTimeout = DEFAULT_PAGE_LOAD_TIMEOUT;
-        Configuration.assertionMode = AssertionMode.valueOf(ASSERTION_MODE.toUpperCase());
-        if (remoteMode) {
-            Configuration.remote = REMOTE_SERVER_URL;
-        }
-
-        open();
-        getWebDriver().manage().window().maximize();
+        initDriverConfiguration(browserName, remoteMode, REMOTE_SERVER_URL);
     }
 
     public static void initDriver(String browserName, boolean remoteMode, String remoteServerUrl) {
+        initDriverConfiguration(browserName, remoteMode, remoteServerUrl);
+    }
+
+    private static void initDriverConfiguration(String browserName, boolean remoteMode, String remoteServerUrl) {
         Configuration.browser = browserName;
         Configuration.pageLoadTimeout = DEFAULT_PAGE_LOAD_TIMEOUT;
         Configuration.assertionMode = AssertionMode.valueOf(ASSERTION_MODE.toUpperCase());
@@ -58,8 +47,16 @@ public class DriverManager {
             Configuration.remote = remoteServerUrl;
         }
 
+        logInitDriverConfiguration();
+
         open();
         getWebDriver().manage().window().maximize();
+    }
+
+    private static void logInitDriverConfiguration() {
+        log.info(LOG_WEB_DRIVER_CONFIGURATION_PATTERN,
+                Configuration.browser, Configuration.pageLoadTimeout, REMOTE_MODE, Configuration.remote,
+                Configuration.assertionMode.name());
     }
 
 }

@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.yakushkin.util.LogHelper.LOG_WEB_DRIVER_CONFIGURATION_PATTERN;
 
 @SpringBootConfiguration
 @Slf4j
@@ -37,6 +38,10 @@ public class AppCucumberConfiguration {
             Configuration.remote = jenkinsDockerMode ? remoteInnerServerUrl : remoteOuterServerUrl;
         }
         Configuration.assertionMode = AssertionMode.valueOf(assertionMode.toUpperCase());
+
+        log.info(LOG_WEB_DRIVER_CONFIGURATION_PATTERN,
+                Configuration.browser, Configuration.pageLoadTimeout, remoteMode, Configuration.remote,
+                Configuration.assertionMode.name());
 
         open();
         getWebDriver().manage().window().maximize();
