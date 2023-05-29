@@ -19,6 +19,21 @@
     </properties>
 
     <dependencies>
+        <!--        Selenide-->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-testng</artifactId>
+            <version>6.12.3</version>
+        </dependency>
+
+        <!--        TestNG-->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+            <scope>test</scope>
+        </dependency>
+
         <!--        Cucumber-->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -29,6 +44,13 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-spring</artifactId>
             <version>${cucumber.version}</version>
+        </dependency>
+
+        <!--        Surefire-->
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>2.21.0</version>
         </dependency>
 
         <!--        Test scope section-->

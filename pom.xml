@@ -56,11 +56,6 @@
             <artifactId>selenide</artifactId>
             <version>6.12.3</version>
         </dependency>
-        <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>selenide-testng</artifactId>
-            <version>6.12.3</version>
-        </dependency>
 
         <!--        Testing section-->
         <!--        Spring Boot Test-->
@@ -68,18 +63,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.maven.surefire</groupId>
-            <artifactId>surefire-testng</artifactId>
-            <version>2.21.0</version>
         </dependency>
     </dependencies>
 
