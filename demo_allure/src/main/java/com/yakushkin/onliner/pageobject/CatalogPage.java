@@ -66,7 +66,7 @@ public class CatalogPage extends BasePage {
                 .toList();
 
         $$x(CATALOG_NAVIGATION_CLASSIFIER_ITEM_XPATH)
-                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(15))
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(30))
                 .shouldHave(containExactTextsCaseSensitive(expectedClassifierTitles));
 
         return this;
@@ -75,7 +75,7 @@ public class CatalogPage extends BasePage {
     @Step("click by 'Компьютеры и сети' classifier")
     public CatalogPage clickOnComputersAndNetworksClassifier() {
         $x(String.format(CATALOG_CLASSIFIER_XPATH_PATTERN, "Компьютеры"))
-                .shouldBe(visible, ofSeconds(15))
+                .shouldBe(visible, ofSeconds(30))
                 .click();
         return this;
     }
@@ -84,7 +84,7 @@ public class CatalogPage extends BasePage {
     @Step("click by 'Электроника' classifier")
     public CatalogPage clickOnElectronicsClassifier() {
         $x(String.format(CATALOG_CLASSIFIER_XPATH_PATTERN, "Электроника"))
-                .shouldBe(visible, ofSeconds(15))
+                .shouldBe(visible, ofSeconds(30))
                 .click();
         return this;
     }
@@ -92,7 +92,7 @@ public class CatalogPage extends BasePage {
     @Step("click by 'Наушники' category")
     public CategoryPage clickOnHeadPhoneCategory() {
         $x(String.format(CATEGORY_XPATH_PATTERN, "Аудиотехника", "Наушники"))
-                .shouldBe(visible, ofSeconds(15))
+                .shouldBe(visible, ofSeconds(30))
                 .click();
         return new CategoryPage();
     }
@@ -100,7 +100,7 @@ public class CatalogPage extends BasePage {
     @Step("hover to 'Комплектующие' title")
     public CatalogPage hoverToAccessoriesAsideTitle() {
         $x(String.format(COMPUTER_AND_NETWORKS_VERTICAL_MENU_XPATH_PATTERN, "Комплектующие"))
-                .shouldBe(visible, ofSeconds(15))
+                .shouldBe(visible, ofSeconds(30))
                 .hover();
         return this;
     }
@@ -108,7 +108,7 @@ public class CatalogPage extends BasePage {
     @Step("hover to 'Аудиотехника' title")
     public CatalogPage hoverToAudioEquipmentAsideTitle() {
         $x(String.format(COMPUTER_AND_NETWORKS_VERTICAL_MENU_XPATH_PATTERN, "Аудиотехника"))
-                .shouldBe(visible, ofSeconds(15))
+                .shouldBe(visible, ofSeconds(30))
                 .hover();
         return this;
     }
