@@ -36,13 +36,6 @@ public class CatalogPage extends BasePage {
     private static final String ALL_CATEGORIES_BY_POINT_FROM_VERTICAL_MENU_XPATH_PATTERN = "//div[normalize-space(text())='%s']/parent::*//a/span";
     private static final String CATEGORY_XPATH_PATTERN = "//div[contains(text(),'%s')]/parent::*//span[contains(text(),'%s')]";
 
-    public CatalogPage() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                .screenshots(true)
-                .savePageSource(false));
-    }
-
-    //    @Override
     @Step("open Onliner Catalog page ( https://catalog.onliner.by/ )")
     public CatalogPage open() {
         Selenide.open(CATALOG_PAGE.getUrl());
