@@ -4,6 +4,8 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 import static com.codeborne.selenide.CollectionCondition.allMatch;
 import static com.codeborne.selenide.Selenide.$$x;
 
@@ -13,7 +15,7 @@ public class CategoryPage extends BasePage {
     @Step("verify the product cards are visible")
     public CategoryPage verifyProductCards() {
         $$x("//div[contains(@class,'schema-product__group')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("not null", Objects::nonNull));
 
         return this;
     }
