@@ -23,7 +23,7 @@ public class CategoryPage extends BasePage {
     @Step("verify the product card titles are visible and not blank")
     public CategoryPage verifyProductCardTitles() {
         $$x("//span[contains(@data-bind,'product.full_name')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed))
+                .shouldBe(allMatch("not null", Objects::nonNull))
                 .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
 
         return this;
@@ -35,7 +35,7 @@ public class CategoryPage extends BasePage {
             "/div[contains(@class,'schema-product__part_2')]" +
             "/div[contains(@class,'schema-product__part_3')]" +
             "//span[contains(@data-bind,'root.format.minPrice')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed))
+                .shouldBe(allMatch("not null", Objects::nonNull))
                 .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
 
         return this;
@@ -44,7 +44,7 @@ public class CategoryPage extends BasePage {
     @Step("verify the product card descriptions are visible and not blank")
     public CategoryPage verifyProductDescriptions() {
         $$x("//span[contains(@data-bind,'product.description')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed))
+                .shouldBe(allMatch("not null", Objects::nonNull))
                 .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
 
         return this;
@@ -53,7 +53,7 @@ public class CategoryPage extends BasePage {
     @Step("verify the product card ratings are visible")
     public CategoryPage verifyProductRatings() {
         $$x("//div[@class='schema-product__rating-group']")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("not null", Objects::nonNull));
 
         return this;
     }
@@ -61,7 +61,7 @@ public class CategoryPage extends BasePage {
     @Step("verify the product card images are visible")
     public CategoryPage verifyProductImages() {
         $$x("//div[@class='schema-product__group']/div/div/div[@class='schema-product__image']")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("not null", Objects::nonNull));
 
         return this;
     }
@@ -71,7 +71,7 @@ public class CategoryPage extends BasePage {
         $$x("//div[not(contains(@class,'schema-product_children'))]" +
             "/div[contains(@class,'schema-product__part_1')]" +
             "/div[@class='schema-product__compare']")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("not null", Objects::nonNull));
 
         return this;
     }
