@@ -1,9 +1,11 @@
 package com.yakushkin.onliner.pageobject;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import com.yakushkin.enumiration.CatalogNavigationClassifier;
 import com.yakushkin.enumiration.ComputerAndNetworksVerticalMenuPoint;
 import io.qameta.allure.Step;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
 
@@ -34,7 +36,13 @@ public class CatalogPage extends BasePage {
     private static final String ALL_CATEGORIES_BY_POINT_FROM_VERTICAL_MENU_XPATH_PATTERN = "//div[normalize-space(text())='%s']/parent::*//a/span";
     private static final String CATEGORY_XPATH_PATTERN = "//div[contains(text(),'%s')]/parent::*//span[contains(text(),'%s')]";
 
-//    @Override
+    public CatalogPage() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)
+                .savePageSource(false));
+    }
+
+    //    @Override
     @Step("open Onliner Catalog page ( https://catalog.onliner.by/ )")
     public CatalogPage open() {
         Selenide.open(CATALOG_PAGE.getUrl());
