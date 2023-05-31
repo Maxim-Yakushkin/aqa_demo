@@ -16,37 +16,18 @@ public class LoginFormTest {
 
     @Autowired
     private MainPage mainPage;
-    @Autowired
-    private CatalogPage catalogPage;
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    void loginFromMainPage() {
+    void checkLoginForm() {
         Configuration.assertionMode = AssertionMode.SOFT;
         mainPage
                 .open()
                 .clickOnEnterButton()
-                .typingCredentials("***", "***") // type e-mail and password instead ***
-                .clickOnLoginButton()
-                .clickOnRecaptchaCheckbox();
-
-        mainPage
-                .verifyNavigationLogo();
-    }
-
-    @Test
-    @Severity(SeverityLevel.BLOCKER)
-    void loginFromCatalogPage() {
-        Configuration.assertionMode = AssertionMode.SOFT;
-        catalogPage
-                .open()
-                .clickOnEnterButton()
-                .typingCredentials("***", "***") // type e-mail and password instead ***
-                .clickOnLoginButton()
-                .clickOnRecaptchaCheckbox();
-
-        catalogPage
-                .verifyNavigationTitle();
+                .checkLoginFormStructure()
+                .checkLoginHeaderStructure()
+                .checkLoginBodyStructure()
+                .checkLoginFooterStructure();
     }
 
     @Test

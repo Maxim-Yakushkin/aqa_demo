@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 28 01:36:15 MSK 2023</td>
+<td>Started on:</td><td>Mon May 29 17:00:14 MSK 2023</td>
 </tr>
-<tr><td>Total time:</td><td>22 seconds (22663 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46495 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,14 +77,174 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.yakushkin.cucumber.testng.runner.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.yakushkin.cucumber.testng.runner.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Shopping cart should contains selected product by click on 'В корзину' button", "As an open web user"</td>
-<td></td>
-<td>14</td>
-<td>com.yakushkin.cucumber.testng.runner.CucumberTestRunner@59429fac</td></tr>
+<td><div><pre>com.codeborne.selenide.ex.SoftAssertionError: Test com.yakushkin.cucumber.testng.runner.CucumberTestRunner.runScenario failed (2 failures)
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg}]
+selenide.url: https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg}]
+selenide.url: https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	at com.codeborne.selenide.logevents.ErrorsCollector.cleanAndGetAssertionError(ErrorsCollector.java:64)
+	at com.codeborne.selenide.testng.SoftAsserts.failIfErrors(SoftAsserts.java:91)
+	at com.codeborne.selenide.testng.SoftAsserts.onTestFailure(SoftAsserts.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace964557800", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace964557800'><pre>com.codeborne.selenide.ex.SoftAssertionError: Test com.yakushkin.cucumber.testng.runner.CucumberTestRunner.runScenario failed (2 failures)
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg}]
+selenide.url: https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg}]
+selenide.url: https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	at com.codeborne.selenide.logevents.ErrorsCollector.cleanAndGetAssertionError(ErrorsCollector.java:64)
+	at com.codeborne.selenide.testng.SoftAsserts.failIfErrors(SoftAsserts.java:91)
+	at com.codeborne.selenide.testng.SoftAsserts.onTestFailure(SoftAsserts.java:31)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+</pre></div></td>
+<td>20</td>
+<td>com.yakushkin.cucumber.testng.runner.CucumberTestRunner@6f1de4c7</td></tr>
 <tr>
 <td title='com.yakushkin.cucumber.testng.runner.CucumberTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.yakushkin.cucumber.testng.runner.CucumberTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Shopping cart should contains selected product by click on 'В корзину' button", "As an open web user"</td>
-<td></td>
-<td>7</td>
-<td>com.yakushkin.cucumber.testng.runner.CucumberTestRunner@59429fac</td></tr>
+<td><div><pre>com.codeborne.selenide.ex.SoftAssertionError: Test com.yakushkin.cucumber.testng.runner.CucumberTestRunner.runScenario failed (2 failures)
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12}]
+selenide.url: https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12}]
+selenide.url: https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	at com.codeborne.selenide.logevents.ErrorsCollector.cleanAndGetAssertionError(ErrorsCollector.java:64)
+	at com.codeborne.selenide.testng.SoftAsserts.failIfErrors(SoftAsserts.java:91)
+	at com.codeborne.selenide.testng.SoftAsserts.onTestFailure(SoftAsserts.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1276200583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1276200583'><pre>com.codeborne.selenide.ex.SoftAssertionError: Test com.yakushkin.cucumber.testng.runner.CucumberTestRunner.runScenario failed (2 failures)
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12}]
+selenide.url: https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	org.openqa.selenium.TimeoutException: TimedPromise timed out after 20000 ms
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12}]
+selenide.url: https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+	at com.codeborne.selenide.logevents.ErrorsCollector.cleanAndGetAssertionError(ErrorsCollector.java:64)
+	at com.codeborne.selenide.testng.SoftAsserts.failIfErrors(SoftAsserts.java:91)
+	at com.codeborne.selenide.testng.SoftAsserts.onTestFailure(SoftAsserts.java:31)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:99)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:277)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:764)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+</pre></div></td>
+<td>25</td>
+<td>com.yakushkin.cucumber.testng.runner.CucumberTestRunner@6f1de4c7</td></tr>
 </table><p>
 </body>
 </html>

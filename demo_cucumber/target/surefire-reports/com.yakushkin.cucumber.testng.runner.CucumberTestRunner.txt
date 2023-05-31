@@ -1,4 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: com.yakushkin.cucumber.testng.runner.CucumberTestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.684 s - in com.yakushkin.cucumber.testng.runner.CucumberTestRunner
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 46.925 s <<< FAILURE! - in com.yakushkin.cucumber.testng.runner.CucumberTestRunner
+runScenario(com.yakushkin.cucumber.testng.runner.CucumberTestRunner)  Time elapsed: 25.821 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+TimedPromise timed out after 20000 ms
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12}]
+selenide.url: https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+
+runScenario(com.yakushkin.cucumber.testng.runner.CucumberTestRunner)  Time elapsed: 20.137 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+TimedPromise timed out after 20000 ms
+Build info: version: '4.8.3', revision: 'e5e76298c3'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+selenide.remote: http://localhost:6672/wd/hub
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5, get {url=https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg}]
+selenide.url: https://catalog.onliner.by/mobile/xiaomi/mi1312256gllg
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0, moz:accessibilityChecks: false, moz:buildID: 20230406114409, moz:debuggerAddress: 127.0.0.1:9222, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 5.10.16.3-microsoft-standar..., moz:processID: 77, moz:profile: /tmp/rust_mozprofileBbPhX3, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+selenide.baseUrl: http://localhost:8080
+Session ID: d080f0ba-52ca-4bcc-8c6e-ec88ae6524c5
+
