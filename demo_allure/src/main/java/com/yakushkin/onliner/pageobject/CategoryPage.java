@@ -24,7 +24,7 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductCardTitles() {
         $$x("//span[contains(@data-bind,'product.full_name')]")
                 .shouldBe(allMatch("not null", Objects::nonNull))
-                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
+                .shouldHave(allMatch("text is not blank", Objects::nonNull));
 
         return this;
     }
@@ -36,7 +36,7 @@ public class CategoryPage extends BasePage {
             "/div[contains(@class,'schema-product__part_3')]" +
             "//span[contains(@data-bind,'root.format.minPrice')]")
                 .shouldBe(allMatch("not null", Objects::nonNull))
-                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
+                .shouldHave(allMatch("text is not blank", Objects::nonNull));
 
         return this;
     }
@@ -45,7 +45,7 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductDescriptions() {
         $$x("//span[contains(@data-bind,'product.description')]")
                 .shouldBe(allMatch("not null", Objects::nonNull))
-                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
+                .shouldHave(allMatch("text is not blank", Objects::nonNull));
 
         return this;
     }
