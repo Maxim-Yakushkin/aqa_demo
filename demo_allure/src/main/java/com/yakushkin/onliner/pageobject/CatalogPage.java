@@ -1,11 +1,9 @@
 package com.yakushkin.onliner.pageobject;
 
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import com.yakushkin.enumiration.CatalogNavigationClassifier;
 import com.yakushkin.enumiration.ComputerAndNetworksVerticalMenuPoint;
 import io.qameta.allure.Step;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.WebElement;
 import org.springframework.stereotype.Component;
 
