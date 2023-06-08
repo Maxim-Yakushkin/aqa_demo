@@ -31,15 +31,12 @@ public class DriverManager {
         initDriverConfiguration(browserName, REMOTE_MODE, REMOTE_SERVER_URL);
     }
 
-    public static String initDriver(String browserName, boolean remoteMode) {
+    public static void initDriver(String browserName, boolean remoteMode) {
         initDriverConfiguration(browserName, remoteMode, REMOTE_SERVER_URL);
-        return "lalala";
     }
 
-    public static Double initDriver(String browserName, boolean remoteMode, String remoteServerUrl) {
+    public static void initDriver(String browserName, boolean remoteMode, String remoteServerUrl) {
         initDriverConfiguration(browserName, remoteMode, remoteServerUrl);
-
-        return new Double(5);
     }
 
     private static void initDriverConfiguration(String browserName, boolean remoteMode, String remoteServerUrl) {
