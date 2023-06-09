@@ -11,6 +11,7 @@ import static com.codeborne.selenide.CollectionCondition.allMatch;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
+import static java.time.Duration.ofSeconds;
 
 @Component
 public class CategoryPage extends BasePage {
@@ -21,7 +22,7 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductCards() {
         closeMiniPayTutorialPopupIfVisible();
         $$x("//div[contains(@class,'schema-product__group')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10));
 
         return this;
     }
@@ -30,8 +31,8 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductCardTitles() {
         closeMiniPayTutorialPopupIfVisible();
         $$x("//span[contains(@data-bind,'product.full_name')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed))
-                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10))
+                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()), ofSeconds(10));
 
         return this;
     }
@@ -43,7 +44,7 @@ public class CategoryPage extends BasePage {
             "/div[contains(@class,'schema-product__part_2')]" +
             "/div[contains(@class,'schema-product__part_3')]" +
             "//span[contains(@data-bind,'root.format.minPrice')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed))
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10))
                 .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
 
         return this;
@@ -53,8 +54,8 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductDescriptions() {
         closeMiniPayTutorialPopupIfVisible();
         $$x("//span[contains(@data-bind,'product.description')]")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed))
-                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()));
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10))
+                .shouldHave(allMatch("text is not blank", el -> !el.getText().isBlank()), ofSeconds(10));
 
         return this;
     }
@@ -63,7 +64,7 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductRatings() {
         closeMiniPayTutorialPopupIfVisible();
         $$x("//div[@class='schema-product__rating-group']")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10));
 
         return this;
     }
@@ -72,7 +73,7 @@ public class CategoryPage extends BasePage {
     public CategoryPage verifyProductImages() {
         closeMiniPayTutorialPopupIfVisible();
         $$x("//div[@class='schema-product__group']/div/div/div[@class='schema-product__image']")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10));
 
         return this;
     }
@@ -83,7 +84,7 @@ public class CategoryPage extends BasePage {
         $$x("//div[not(contains(@class,'schema-product_children'))]" +
             "/div[contains(@class,'schema-product__part_1')]" +
             "/div[@class='schema-product__compare']")
-                .shouldBe(allMatch("visible", WebElement::isDisplayed));
+                .shouldBe(allMatch("visible", WebElement::isDisplayed), ofSeconds(10));
 
         return this;
     }
@@ -95,7 +96,7 @@ public class CategoryPage extends BasePage {
                     $x("//span[contains(@class, 'schema-product__tutorial-button')]");
             if (miniPayTutorialPopupButton.exists() && miniPayTutorialPopupButton.isDisplayed()) {
                 miniPayTutorialPopupButton
-                        .shouldBe(visible, Duration.ofSeconds(10))
+                        .shouldBe(visible, ofSeconds(10))
                         .click();
             }
 
