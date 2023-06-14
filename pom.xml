@@ -11,6 +11,7 @@
         <module>demo_allure</module>
         <module>demo_rest</module>
         <module>demo_cucumber</module>
+        <module>demo_unit</module>
     </modules>
     <name>aqa_demo</name>
     <description>aqa_demo</description>

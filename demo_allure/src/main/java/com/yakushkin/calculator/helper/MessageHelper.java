@@ -1,4 +1,4 @@
-package com.yakushkin.helper;
+package com.yakushkin.calculator.helper;
 
 public class MessageHelper {
 
