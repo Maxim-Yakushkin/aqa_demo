@@ -24,6 +24,14 @@
             <artifactId>rest-assured</artifactId>
             <version>5.2.1</version>
         </dependency>
+
+        <!--        WireMock Spring Boot-->
+        <dependency>
+            <groupId>com.maciejwalkowiak.spring</groupId>
+            <artifactId>wiremock-spring-boot</artifactId>
+            <version>2.1.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
